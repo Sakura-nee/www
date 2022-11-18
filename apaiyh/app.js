@@ -63,7 +63,7 @@ themeCheck();
 
 
 // Socket
-var ws = new WebSocket("ws://console.yuukifor.me:8080");
+var ws = new WebSocket("wss://console.yuukifor.me:8080");
 ws.onopen = function (evt) {
     ws.send(JSON.stringify({ session_id: "yuuki", type: "join" }))
 }
