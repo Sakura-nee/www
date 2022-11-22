@@ -75,7 +75,6 @@ document.querySelector('#create_button').addEventListener('click', () => {
 
 ws.onmessage = function (evt) {
     let json_resp = JSON.parse(evt.data);
-    console.log(json_resp)
     if (json_resp.status === "success") {
         document.querySelector('#mirror_progress').innerHTML = `<span class="flex border rounded-full bg-[#ececec] dark:bg-[#2D2B3B] p-3 border-zinc-700 text-black dark:text-white"><p class="border rounded-full bg-blue-600 px-2 text-[0.75rem] mr-3 text-center">success</p><p>${json_resp.message}</p></span>`;
     } else {
